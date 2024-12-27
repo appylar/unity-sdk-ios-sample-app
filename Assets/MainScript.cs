@@ -55,20 +55,20 @@ private static extern void hideBanner();
 
 public static ScreenOrientation orientation = ScreenOrientation.Portrait;
 
-   
     void Start() {
-       setOnInitialized(initialized);
-       setOnError(error);
-       setOnNoBanner(noBanner);
-       setOnBannerShown(bannerShown);
-       setOnNoInterstitial(noInterstitial);
-       setOnInterstitialClosed(interstitialClosed);
-       setOnInterstitialShown(interstitialShown);
+      setOnInitialized(initialized);
+      setOnError(error);
+      setOnNoBanner(noBanner);
+      setOnBannerShown(bannerShown);
+      setOnNoInterstitial(noInterstitial);
+      setOnInterstitialClosed(interstitialClosed);
+      setOnInterstitialShown(interstitialShown);
+      Initialize();
     }
 
     public void InitializeSDK()
     {
-      string appKey = "OwDmESooYtY2kNPotIuhiQ";
+      string appKey = "<YOUR_IOS_APP_KEY>";
       string orientations = "portrait landscape";
       string adTypes = "banner interstitial";
       initialize(appKey, adTypes, orientations, true);  
