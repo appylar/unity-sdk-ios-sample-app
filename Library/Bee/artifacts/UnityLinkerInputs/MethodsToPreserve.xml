@@ -1,11 +1,9 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
 		<type fullname="MainScript">
-			<method name="InitializeSDK"/>
 			<method name="OnPressHideBanner"/>
 			<method name="OnPressShowBottomBanner"/>
 			<method name="OnPressShowInterstitial"/>
-			<method name="OnPressShowTopBanner"/>
 		</type>
 	</assembly>
 </linker>

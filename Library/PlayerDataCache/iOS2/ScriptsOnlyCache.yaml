@@ -15,8 +15,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
     UnityEngine.UI.dll:
-    - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
@@ -60,12 +58,6 @@ ScriptsOnlyBuild:
     methodName: OnPressShowInterstitial
   - assembly: Assembly-CSharp
     fullTypeName: MainScript
-    methodName: InitializeSDK
-  - assembly: Assembly-CSharp
-    fullTypeName: MainScript
-    methodName: OnPressShowTopBanner
-  - assembly: Assembly-CSharp
-    fullTypeName: MainScript
     methodName: OnPressHideBanner
   - assembly: Assembly-CSharp
     fullTypeName: MainScript
@@ -103,8 +95,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 19252}
     - Class: 114
-      Script: {instanceID: 19282}
-    - Class: 114
       Script: {instanceID: 19292}
     - Class: 114
       Script: {instanceID: 19368}
@@ -114,8 +104,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 19442}
     - Class: 114
       Script: {instanceID: 19476}
-    - Class: 114
-      Script: {instanceID: 19520}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
