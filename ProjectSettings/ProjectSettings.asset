@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Appylar zip
+  companyName: Appylar
+  productName: Appylar Unity Sample App
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
@@ -166,7 +166,8 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.DefaultCompany.Appylarzip
-    iPhone: com.DefaultCompany.Appylar-zip
+    Standalone: com.DefaultCompany.Appylar-Unity-Sample-App
+    iPhone: com.DefaultCompany.Appylar-Unity-Sample-App
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -331,6 +332,13 @@ PlayerSettings:
       m_Icon: {fileID: 0}
       m_Width: 16
       m_Height: 16
+      m_Kind: 0
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: fe12d2915865942f4973778b9226b768, type: 3}
+      m_Width: 128
+      m_Height: 128
       m_Kind: 0
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: iPhone

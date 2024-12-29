@@ -448,7 +448,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Info.plist"
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleDisplayName</key>
-    <string>Appylar zip</string>
+    <string>Appylar Unity Sample App</string>
     <key>CFBundleExecutable</key>
     <string>${EXECUTABLE_NAME}</string>
     <key>CFBundleIdentifier</key>
@@ -520,6 +520,72 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone/Images
 			"size" : "60x60"
 		},
 		{
+			"filename" : "Icon-iPhone-Settings-29.png",
+			"idiom" : "iphone",
+			"scale" : "1x",
+			"size" : "29x29"
+		},
+		{
+			"filename" : "Icon-iPhone-Settings-58.png",
+			"idiom" : "iphone",
+			"scale" : "2x",
+			"size" : "29x29"
+		},
+		{
+			"filename" : "Icon-iPhone-Settings-87.png",
+			"idiom" : "iphone",
+			"scale" : "3x",
+			"size" : "29x29"
+		},
+		{
+			"filename" : "Icon-iPhone-Spotlight-80.png",
+			"idiom" : "iphone",
+			"scale" : "2x",
+			"size" : "40x40"
+		},
+		{
+			"filename" : "Icon-iPhone-Spotlight-120.png",
+			"idiom" : "iphone",
+			"scale" : "3x",
+			"size" : "40x40"
+		},
+		{
+			"filename" : "Icon-iPhone-Notification-40.png",
+			"idiom" : "iphone",
+			"scale" : "2x",
+			"size" : "20x20"
+		},
+		{
+			"filename" : "Icon-iPhone-Notification-60.png",
+			"idiom" : "iphone",
+			"scale" : "3x",
+			"size" : "20x20"
+		},
+		{
+			"filename" : "Icon-iPad-Settings-29.png",
+			"idiom" : "ipad",
+			"scale" : "1x",
+			"size" : "29x29"
+		},
+		{
+			"filename" : "Icon-iPad-Settings-58.png",
+			"idiom" : "ipad",
+			"scale" : "2x",
+			"size" : "29x29"
+		},
+		{
+			"filename" : "Icon-iPad-Spotlight-40.png",
+			"idiom" : "ipad",
+			"scale" : "1x",
+			"size" : "40x40"
+		},
+		{
+			"filename" : "Icon-iPad-Spotlight-80.png",
+			"idiom" : "ipad",
+			"scale" : "2x",
+			"size" : "40x40"
+		},
+		{
 			"filename" : "Icon-iPad-76.png",
 			"idiom" : "ipad",
 			"scale" : "1x",
@@ -532,10 +598,28 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone/Images
 			"size" : "76x76"
 		},
 		{
+			"filename" : "Icon-iPad-Notification-20.png",
+			"idiom" : "ipad",
+			"scale" : "1x",
+			"size" : "20x20"
+		},
+		{
+			"filename" : "Icon-iPad-Notification-40.png",
+			"idiom" : "ipad",
+			"scale" : "2x",
+			"size" : "20x20"
+		},
+		{
 			"filename" : "Icon-iPad-167.png",
 			"idiom" : "ipad",
 			"scale" : "2x",
 			"size" : "83.5x83.5"
+		},
+		{
+			"filename" : "Icon-Store-1024.png",
+			"idiom" : "ios-marketing",
+			"scale" : "1x",
+			"size" : "1024x1024"
 		}
 	],
 	"info" : {
@@ -2004,7 +2088,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ea.realracing3.inc;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.Appylar-Unity-Sample-App";
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -2043,7 +2127,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ea.realracing3.inc;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.Appylar-Unity-Sample-App";
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -2191,7 +2275,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PRODUCT_NAME_APP = Appylarzip;
+				PRODUCT_NAME_APP = AppylarUnitySampleApp;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 			};
@@ -2224,7 +2308,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ea.realracing3.inc;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.Appylar-Unity-Sample-App";
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -2318,7 +2402,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PRODUCT_NAME_APP = Appylarzip;
+				PRODUCT_NAME_APP = AppylarUnitySampleApp;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 			};
@@ -2350,7 +2434,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ea.realracing3.inc;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.Appylar-Unity-Sample-App";
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -2908,7 +2992,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME_APP = Appylarzip;
+				PRODUCT_NAME_APP = AppylarUnitySampleApp;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 			};
@@ -2947,7 +3031,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PRODUCT_NAME_APP = Appylarzip;
+				PRODUCT_NAME_APP = AppylarUnitySampleApp;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 			};

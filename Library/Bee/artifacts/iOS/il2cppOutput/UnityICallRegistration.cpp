@@ -1162,6 +1162,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GameObject_get_layer_Injected();
 		Register_UnityEngine_GameObject_get_layer_Injected();
 
+		//System.IntPtr UnityEngine.GameObject::Find_Injected(UnityEngine.Bindings.ManagedSpanWrapper&)
+		void Register_UnityEngine_GameObject_Find_Injected();
+		Register_UnityEngine_GameObject_Find_Injected();
+
 		//System.IntPtr UnityEngine.GameObject::GetComponentInChildren_Injected(System.IntPtr,System.Type,System.Boolean)
 		void Register_UnityEngine_GameObject_GetComponentInChildren_Injected();
 		Register_UnityEngine_GameObject_GetComponentInChildren_Injected();
@@ -2197,6 +2201,10 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.Object[] UnityEngine.Object::FindObjectsByType(System.Type,UnityEngine.FindObjectsInactive,UnityEngine.FindObjectsSortMode)
 		void Register_UnityEngine_Object_FindObjectsByType();
 		Register_UnityEngine_Object_FindObjectsByType();
+
+		//UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type,System.Boolean)
+		void Register_UnityEngine_Object_FindObjectsOfType();
+		Register_UnityEngine_Object_FindObjectsOfType();
 
 	//End Registrations for type : UnityEngine.Object
 
