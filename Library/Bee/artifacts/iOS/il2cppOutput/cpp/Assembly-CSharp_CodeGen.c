@@ -22,12 +22,14 @@ extern void MainScript_setOnNoInterstitial_m8B94A323F6A4A48C185735D6A52E00679F86
 extern void MainScript_setOnInterstitialClosed_m12CE81390B635900FC57BB3D214101D2674D35A0 (void);
 extern void MainScript_setOnInterstitialShown_mC9C87F0AF0C55A96E93287E2FED7DBC97B7C5503 (void);
 extern void MainScript_initialize_m513A3C5323110B42EFFBA56AEE869361FA245669 (void);
+extern void MainScript_showTopBanner_mF0E2B85A6392E7E019F1707DC49296CE8999EA66 (void);
 extern void MainScript_showBottomBanner_m3F11BE52C51420117B63C46E1616C0F7C7C15E75 (void);
 extern void MainScript_showInterstitial_m3F801CAA799BFAE1AE9E2FDC6F417B9F756EC83A (void);
 extern void MainScript_hideInterstitial_m695A232C337EE2B0C09E3BAB70939F04DCB60487 (void);
 extern void MainScript_hideBanner_m9830DEFF53E338870A7794609C4D73B0D3D33542 (void);
 extern void MainScript_Start_mBADE8064A3ECDE65CA419F12BBA580065CFD9017 (void);
 extern void MainScript_InitializeSDK_mA6F6CC5B96772CA29A767792DF6E3AB812DA7180 (void);
+extern void MainScript_OnPressShowTopBanner_mC91632F06D238C49A413907F9D7864562CB3AAF2 (void);
 extern void MainScript_OnPressShowBottomBanner_m254767B137E4D8831077996394C149C094DEB6F9 (void);
 extern void MainScript_OnPressShowInterstitial_m24D2BF8EB934ABB80370A1ED0EFE338EE47C1E6B (void);
 extern void MainScript_OnPressHideBanner_mB874B308B8219A5AFF008A06132905D65FAEB604 (void);
@@ -335,7 +337,7 @@ extern void U3CWarpTextU3Ed__8_MoveNext_mCE7A826C5E4854C2C509C77BD18F5A9B6D691B0
 extern void U3CWarpTextU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD80368E9B7E259311C03E406B75161ED6F7618E3 (void);
 extern void U3CWarpTextU3Ed__8_System_Collections_IEnumerator_Reset_m07746C332D2D8CE5DEA59873C26F2FAD4B369B42 (void);
 extern void U3CWarpTextU3Ed__8_System_Collections_IEnumerator_get_Current_m71D7F84D9DEF63BEC6B44866515DDCF35B142A19 (void);
-static Il2CppMethodPointer s_methodPointers[321] = 
+static Il2CppMethodPointer s_methodPointers[323] = 
 {
 	MainScript_setOnInitialized_m966D14C8B138EF0541B8DEA297F8FFA5D137809F,
 	MainScript_setOnError_m5885352929A520C3477DE7F4E42B22CC9654FBB2,
@@ -345,12 +347,14 @@ static Il2CppMethodPointer s_methodPointers[321] =
 	MainScript_setOnInterstitialClosed_m12CE81390B635900FC57BB3D214101D2674D35A0,
 	MainScript_setOnInterstitialShown_mC9C87F0AF0C55A96E93287E2FED7DBC97B7C5503,
 	MainScript_initialize_m513A3C5323110B42EFFBA56AEE869361FA245669,
+	MainScript_showTopBanner_mF0E2B85A6392E7E019F1707DC49296CE8999EA66,
 	MainScript_showBottomBanner_m3F11BE52C51420117B63C46E1616C0F7C7C15E75,
 	MainScript_showInterstitial_m3F801CAA799BFAE1AE9E2FDC6F417B9F756EC83A,
 	MainScript_hideInterstitial_m695A232C337EE2B0C09E3BAB70939F04DCB60487,
 	MainScript_hideBanner_m9830DEFF53E338870A7794609C4D73B0D3D33542,
 	MainScript_Start_mBADE8064A3ECDE65CA419F12BBA580065CFD9017,
 	MainScript_InitializeSDK_mA6F6CC5B96772CA29A767792DF6E3AB812DA7180,
+	MainScript_OnPressShowTopBanner_mC91632F06D238C49A413907F9D7864562CB3AAF2,
 	MainScript_OnPressShowBottomBanner_m254767B137E4D8831077996394C149C094DEB6F9,
 	MainScript_OnPressShowInterstitial_m24D2BF8EB934ABB80370A1ED0EFE338EE47C1E6B,
 	MainScript_OnPressHideBanner_mB874B308B8219A5AFF008A06132905D65FAEB604,
@@ -659,7 +663,7 @@ static Il2CppMethodPointer s_methodPointers[321] =
 	U3CWarpTextU3Ed__8_System_Collections_IEnumerator_Reset_m07746C332D2D8CE5DEA59873C26F2FAD4B369B42,
 	U3CWarpTextU3Ed__8_System_Collections_IEnumerator_get_Current_m71D7F84D9DEF63BEC6B44866515DDCF35B142A19,
 };
-static const int32_t s_InvokerIndices[321] = 
+static const int32_t s_InvokerIndices[323] = 
 {
 	8603,
 	8603,
@@ -673,6 +677,8 @@ static const int32_t s_InvokerIndices[321] =
 	8810,
 	8810,
 	8810,
+	8810,
+	6365,
 	6365,
 	6365,
 	6365,
@@ -985,19 +991,19 @@ static const int32_t s_InvokerIndices[321] =
 };
 static const Il2CppTokenIndexMethodTuple s_reversePInvokeIndices[7] = 
 {
-	{ 0x06000012, 5,  (void**)&MainScript_initialized_m1A6629BA32132C5734CF59F28D3B8589E7A9BD86_RuntimeMethod_var, 0 },
-	{ 0x06000013, 4,  (void**)&MainScript_error_m97AD04E554F8E924E2004C80FA481AE5C0A2B55E_RuntimeMethod_var, 0 },
-	{ 0x06000014, 8,  (void**)&MainScript_noBanner_mA0B4E580691277D364A0CB84679E2C76AABF8B9A_RuntimeMethod_var, 0 },
-	{ 0x06000015, 3,  (void**)&MainScript_bannerShown_mAEDAB37B1F91E333586705A21F671101ACE4D959_RuntimeMethod_var, 0 },
-	{ 0x06000016, 9,  (void**)&MainScript_noInterstitial_mDC5984C5DB617264E6850348EFA1276276C31661_RuntimeMethod_var, 0 },
-	{ 0x06000017, 7,  (void**)&MainScript_interstitialShown_m4C6CE61EFD64306CF682BDCA2B7BB05D10A91BE7_RuntimeMethod_var, 0 },
-	{ 0x06000018, 6,  (void**)&MainScript_interstitialClosed_m31CC021F9A8E72118804DE377816C16C0D176883_RuntimeMethod_var, 0 },
+	{ 0x06000014, 5,  (void**)&MainScript_initialized_m1A6629BA32132C5734CF59F28D3B8589E7A9BD86_RuntimeMethod_var, 0 },
+	{ 0x06000015, 4,  (void**)&MainScript_error_m97AD04E554F8E924E2004C80FA481AE5C0A2B55E_RuntimeMethod_var, 0 },
+	{ 0x06000016, 8,  (void**)&MainScript_noBanner_mA0B4E580691277D364A0CB84679E2C76AABF8B9A_RuntimeMethod_var, 0 },
+	{ 0x06000017, 3,  (void**)&MainScript_bannerShown_mAEDAB37B1F91E333586705A21F671101ACE4D959_RuntimeMethod_var, 0 },
+	{ 0x06000018, 9,  (void**)&MainScript_noInterstitial_mDC5984C5DB617264E6850348EFA1276276C31661_RuntimeMethod_var, 0 },
+	{ 0x06000019, 7,  (void**)&MainScript_interstitialShown_m4C6CE61EFD64306CF682BDCA2B7BB05D10A91BE7_RuntimeMethod_var, 0 },
+	{ 0x0600001A, 6,  (void**)&MainScript_interstitialClosed_m31CC021F9A8E72118804DE377816C16C0D176883_RuntimeMethod_var, 0 },
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	321,
+	323,
 	s_methodPointers,
 	0,
 	NULL,

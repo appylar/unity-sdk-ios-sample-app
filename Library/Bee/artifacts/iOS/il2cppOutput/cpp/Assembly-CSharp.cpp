@@ -410,7 +410,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral88BEE283254D7094E258B3A88730F4CC4F1E4AC7
 IL2CPP_EXTERN_C String_t* _stringLiteral8ACAA4E0B28437F5FD1A41CE6591A16813F05377;
 IL2CPP_EXTERN_C String_t* _stringLiteral921115E6CCFE4604C9AD90459CF605D7128BDB0B;
 IL2CPP_EXTERN_C String_t* _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62;
-IL2CPP_EXTERN_C String_t* _stringLiteral970662EC707B497B7814A93BC02E2B69A76C8319;
 IL2CPP_EXTERN_C String_t* _stringLiteral9A7E77DB84E1908153085B0037B2757EFD9E6B67;
 IL2CPP_EXTERN_C String_t* _stringLiteral9C311850C974AD222115D59D4F9F42F19002BA4B;
 IL2CPP_EXTERN_C String_t* _stringLiteral9D329ACFC4F7EECCB821A7FEF99A0F23E1C721B7;
@@ -4373,10 +4372,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void onInterstitialShown__ctor_mF91A9AB184F6D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_setOnInterstitialShown_mC9C87F0AF0C55A96E93287E2FED7DBC97B7C5503 (onInterstitialShown_t01ADC7FC18E335C19F2B25F5793CB4096B8A4A1F* ___0_callBack, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_InitializeSDK_mA6F6CC5B96772CA29A767792DF6E3AB812DA7180 (MainScript_tE5DA41EF9F6C72F24338683BF923785400FDC5FF* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_initialize_m513A3C5323110B42EFFBA56AEE869361FA245669 (String_t* ___0_appKey, String_t* ___1_adTypes, String_t* ___2_orientations, bool ___3_testMode, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_showTopBanner_mF0E2B85A6392E7E019F1707DC49296CE8999EA66 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_showBottomBanner_m3F11BE52C51420117B63C46E1616C0F7C7C15E75 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_showInterstitial_m3F801CAA799BFAE1AE9E2FDC6F417B9F756EC83A (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_hideBanner_m9830DEFF53E338870A7794609C4D73B0D3D33542 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_orientation_mA6B22A441187D50831B2B18CA48A8F64BD1BD89E (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Input_get_deviceOrientation_mC6761FD3F3123DC994FCD2BFAF5BCF0D21DFE91C (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Screen_set_orientation_mFCC880DDE7D3916DD8DA84E546F4743EEE773C4D (int32_t ___0_value, const RuntimeMethod* method) ;
@@ -4818,6 +4818,7 @@ IL2CPP_EXTERN_C void DEFAULT_CALL setOnNoInterstitial(Il2CppMethodPointer);
 IL2CPP_EXTERN_C void DEFAULT_CALL setOnInterstitialClosed(Il2CppMethodPointer);
 IL2CPP_EXTERN_C void DEFAULT_CALL setOnInterstitialShown(Il2CppMethodPointer);
 IL2CPP_EXTERN_C void DEFAULT_CALL initialize(char*, char*, char*, int32_t);
+IL2CPP_EXTERN_C void DEFAULT_CALL showTopBanner();
 IL2CPP_EXTERN_C void DEFAULT_CALL showBottomBanner();
 IL2CPP_EXTERN_C void DEFAULT_CALL showInterstitial();
 IL2CPP_EXTERN_C void DEFAULT_CALL hideInterstitial();
@@ -4982,6 +4983,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_initialize_m513A3C5323110B42E
 	____2_orientations_marshaled = NULL;
 
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_showTopBanner_mF0E2B85A6392E7E019F1707DC49296CE8999EA66 (const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+
+	reinterpret_cast<PInvokeFunc>(showTopBanner)();
+
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_showBottomBanner_m3F11BE52C51420117B63C46E1616C0F7C7C15E75 (const RuntimeMethod* method) 
 {
 	typedef void (DEFAULT_CALL *PInvokeFunc) ();
@@ -5078,7 +5086,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_InitializeSDK_mA6F6CC5B96772C
 		String_t* L_0 = V_1;
 		String_t* L_1 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(MainScript_tE5DA41EF9F6C72F24338683BF923785400FDC5FF_il2cpp_TypeInfo_var);
-		MainScript_initialize_m513A3C5323110B42EFFBA56AEE869361FA245669(_stringLiteral0E7C9BF59CBF339A8F36CFF30B24DE2AFBE299E6, L_0, L_1, (bool)1, NULL);
+		MainScript_initialize_m513A3C5323110B42EFFBA56AEE869361FA245669(_stringLiteral0E7C9BF59CBF339A8F36CFF30B24DE2AFBE299E6, L_0, L_1, (bool)0, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_OnPressShowTopBanner_mC91632F06D238C49A413907F9D7864562CB3AAF2 (MainScript_tE5DA41EF9F6C72F24338683BF923785400FDC5FF* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MainScript_tE5DA41EF9F6C72F24338683BF923785400FDC5FF_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(MainScript_tE5DA41EF9F6C72F24338683BF923785400FDC5FF_il2cpp_TypeInfo_var);
+		MainScript_showTopBanner_mF0E2B85A6392E7E019F1707DC49296CE8999EA66(NULL);
 		return;
 	}
 }
@@ -5087,14 +5109,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainScript_OnPressShowBottomBanner_m2547
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MainScript_tE5DA41EF9F6C72F24338683BF923785400FDC5FF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral970662EC707B497B7814A93BC02E2B69A76C8319);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral970662EC707B497B7814A93BC02E2B69A76C8319, NULL);
 		il2cpp_codegen_runtime_class_init_inline(MainScript_tE5DA41EF9F6C72F24338683BF923785400FDC5FF_il2cpp_TypeInfo_var);
 		MainScript_showBottomBanner_m3F11BE52C51420117B63C46E1616C0F7C7C15E75(NULL);
 		return;

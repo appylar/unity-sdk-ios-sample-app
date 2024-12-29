@@ -63,7 +63,7 @@ public static ScreenOrientation orientation = ScreenOrientation.Portrait;
       setOnNoInterstitial(noInterstitial);
       setOnInterstitialClosed(interstitialClosed);
       setOnInterstitialShown(interstitialShown);
-      InitializeSDK();
+      Initialize();
     }
 
     public void InitializeSDK()

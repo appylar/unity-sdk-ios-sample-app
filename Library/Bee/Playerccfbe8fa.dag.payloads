@@ -2004,7 +2004,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.Appylar-zip";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ea.realracing3.inc;
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -2043,7 +2043,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.Appylar-zip";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ea.realracing3.inc;
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -2224,7 +2224,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.Appylar-zip";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ea.realracing3.inc;
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -2350,7 +2350,7 @@ Payload for "WriteText /Users/gaborkisch/Downloads/build_ios/Unity-iPhone.xcodep
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.Appylar-zip";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ea.realracing3.inc;
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
