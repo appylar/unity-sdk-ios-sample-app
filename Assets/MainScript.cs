@@ -69,13 +69,8 @@ public class MainScript : MonoBehaviour {
   void Start() {
     if (textMeshProUGUI == null){
       textMeshProUGUI = GameObject.Find("status_text").GetComponent<TextMeshProUGUI>();
-
-
-    MainScript mainScriptInstance = FindObjectOfType<MainScript>(); // Find the instance
-    mainScriptInstance.UpdateStatusText("Initializing the SDK, please wait...");
-
-
-      //textMeshProUGUI.text = "Initializing the SDK, please wait...";
+      MainScript mainScriptInstance = FindObjectOfType<MainScript>(); // Find the instance
+      mainScriptInstance.UpdateStatusText("Initializing the SDK, please wait...");
     }
     setOnInitialized(initialized);
     setOnError(error);
