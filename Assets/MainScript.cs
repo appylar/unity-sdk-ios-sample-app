@@ -84,7 +84,7 @@ public class MainScript : MonoBehaviour {
 
   public void InitializeSDK()
   {
-    string appKey = "4MB02YBR3bGV7Df3fVD1Ag";
+    string appKey = "<YOUR_IOS_APP_KEY>";
     string orientations = "portrait landscape";
     string adTypes = "banner interstitial";
     initialize(appKey, adTypes, orientations, true);  
@@ -131,7 +131,7 @@ public class MainScript : MonoBehaviour {
   {
     Debug.Log("onNoBanner()");
     MainScript mainScriptInstance = FindObjectOfType<MainScript>();
-    mainScriptInstance.UpdateStatusText("No more banners in the buffer,\nplease retry again after a minute.");
+    mainScriptInstance.UpdateStatusText("No banners in the buffer.");
   }
 
   [MonoPInvokeCallback(typeof(onBannerShown))]
@@ -147,7 +147,7 @@ public class MainScript : MonoBehaviour {
   {
   Debug.Log("onNoInterstitial()");
   MainScript mainScriptInstance = FindObjectOfType<MainScript>();
-  mainScriptInstance.UpdateStatusText("No more interstitials in the buffer,\nplease retry again after a minute.");
+  mainScriptInstance.UpdateStatusText("No interstitials in the buffer.");
   }
 
 

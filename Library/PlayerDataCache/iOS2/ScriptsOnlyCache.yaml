@@ -634,4 +634,4 @@ ScriptsOnlyBuild:
   platform: 9
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/gaborkisch/Downloads/build_ios
+  playerPath: /Users/gaborkisch/Downloads/unity/ios
