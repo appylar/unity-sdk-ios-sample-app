@@ -1,10 +1,11 @@
 {
   "dependencies": {
     "com.appylar.unity-sdk": {
-      "version": "file:com.appylar.unity-sdk",
+      "version": "1.2.0",
       "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
     },
     "com.unity.multiplayer.center": {
       "version": "1.0.0",
@@ -15,7 +16,7 @@
       }
     },
     "com.unity.ugui": {
-      "version": "1.0.0",
+      "version": "2.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
