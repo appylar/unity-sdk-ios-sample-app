@@ -1,0 +1,79 @@
+using UnityEditor;
+using UnityEditor.Callbacks;
+using UnityEditor.iOS.Xcode;
+using UnityEditor.iOS.Xcode.Extensions;
+using UnityEngine;
+using System.IO;
+using System.Linq;
+
+public static class XcodePostProcessor
+{
+    [PostProcessBuild]
+    public static void OnPostProcessBuild(BuildTarget buildTarget, string pathToBuiltProject)
+    {
+        if (buildTarget != BuildTarget.iOS) return;
+
+        Debug.Log("[PostBuild] Injecting Appylar.framework from .xcframework...");
+
+        // 1. Locate Appylar SDK package
+        string[] matchingDirs = Directory.GetDirectories("Library/PackageCache", "com.appylar.unity-sdk*", SearchOption.TopDirectoryOnly);
+        if (matchingDirs.Length == 0)
+        {
+            Debug.LogError("[PostBuild] Could not locate com.appylar.unity-sdk package.");
+            return;
+        }
+
+        string packagePath = matchingDirs[0];
+        string xcframeworkPath = Path.Combine(packagePath, "Plugins/iOS/Appylar.xcframework");
+        string frameworksPath = Path.Combine(pathToBuiltProject, "Frameworks");
+
+        // 2. Pick device or simulator
+        string arch = GetBuildArchitecture(Path.Combine(pathToBuiltProject, "Info.plist"));
+        string variant = arch.Contains("simulator") ? "ios-arm64_x86_64-simulator" : "ios-arm64";
+
+        string sourceFramework = Path.Combine(xcframeworkPath, variant, "Appylar.framework");
+        string destFramework = Path.Combine(frameworksPath, "Appylar.framework");
+
+        if (!Directory.Exists(sourceFramework))
+        {
+            Debug.LogError($"[PostBuild] Variant not found: {variant}");
+            return;
+        }
+
+        if (Directory.Exists(destFramework))
+            Directory.Delete(destFramework, true);
+
+        FileUtil.CopyFileOrDirectory(sourceFramework, destFramework);
+
+        // 3. Modify Xcode project
+        string projPath = PBXProject.GetPBXProjectPath(pathToBuiltProject);
+        var project = new PBXProject();
+        project.ReadFromFile(projPath);
+
+#if UNITY_2019_3_OR_NEWER
+        string targetGuid = project.GetUnityFrameworkTargetGuid();
+#else
+        string targetGuid = project.TargetGuidByName("UnityFramework");
+#endif
+
+        string relativePath = "Frameworks/Appylar.framework";
+        string fileGuid = project.AddFile(relativePath, relativePath, PBXSourceTree.Source);
+
+        project.AddFileToBuild(targetGuid, fileGuid);
+        PBXProjectExtensions.AddFileToEmbedFrameworks(project, targetGuid, fileGuid);
+
+        project.AddBuildProperty(targetGuid, "LD_RUNPATH_SEARCH_PATHS", "@executable_path/Frameworks");
+        project.AddBuildProperty(targetGuid, "FRAMEWORK_SEARCH_PATHS", "$(PROJECT_DIR)/Frameworks");
+        project.SetBuildProperty(targetGuid, "CODE_SIGN_STYLE", "Automatic");
+
+        project.WriteToFile(projPath);
+        Debug.Log($"[PostBuild] ✅ Embedded Appylar.framework ({variant}) successfully.");
+    }
+
+    private static string GetBuildArchitecture(string plistPath)
+    {
+        if (!File.Exists(plistPath)) return "device";
+        var content = File.ReadAllText(plistPath);
+        return (content.Contains("x86_64") || content.Contains("simulator")) ? "simulator" : "device";
+    }
+}
